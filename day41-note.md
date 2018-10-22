@@ -8,7 +8,6 @@ MVC 是一种使用 MVC（Model View Controller 模型-视图-控制器）设计
 
 + Controller：(数据库)是应用程序中处理用户交互的部分。通常控制器负责从视图读取数据，控制用户输入，并向模型发送数据。
 
-  ​
 
 #### 2. Django中的MVT模式
 
