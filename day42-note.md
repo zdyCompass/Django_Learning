@@ -1,6 +1,6 @@
 #### 1. 创建app应用
 
-在Django中的app就是一个功能模块, 与其他的web框架可能有很大的区别, 将不能功能放在不同的app中, 方便代码的复用。在Terminal中执行以下命令：
+在Django中的app就是一个功能模块, 与其他的web框架可能有很大的区别, 将不同功能放在不同的app中, 方便代码的复用。在Terminal中执行以下命令：
 
 > python manage.py startapp [应用名]app
 
