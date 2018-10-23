@@ -6,7 +6,7 @@
 
 [应用名]可以自定义，这里我就把它叫做app，执行后会在工程下创建一个名为app的文件夹。
 
-![appfiles](E:\千锋上课\python课堂代码\第四阶段\day42\appfiles.jpg)
+![appfiles](https://github.com/zdyCompass/Django_Learning/blob/master/re/appfiles.jpg)
 
 各py文件作用如下：
 
