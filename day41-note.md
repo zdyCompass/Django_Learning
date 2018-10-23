@@ -61,7 +61,7 @@ virtualenv --no-site-packages -p D:\Program Files\anaconda\python.exe [环境名
 
 打开所创建的工程项目目录后，会看到如下文件：
 
-![Django项目文件](E:\千锋上课\python课堂代码\第四阶段\day41\Django项目文件.jpg)
+![Django项目文件](https://github.com/zdyCompass/Django_Learning/blob/master/re/DjangoProject.jpg)
 
 它们的作用如下所示：
 
@@ -83,7 +83,7 @@ virtualenv --no-site-packages -p D:\Program Files\anaconda\python.exe [环境名
 
 或者创建一个Debug脚本：
 
-![runDebug](E:\千锋上课\python课堂代码\第四阶段\day41\runDebug.jpg)
+![runDebug](https://github.com/zdyCompass/Django_Learning/blob/master/re/runDebug.jpg)
 
 ##### 4.4 进入Django管理
 
@@ -93,7 +93,7 @@ virtualenv --no-site-packages -p D:\Program Files\anaconda\python.exe [环境名
 
 会看到如下登录界面：
 
-![Djangomanage](E:\千锋上课\python课堂代码\第四阶段\day41\Djangomanage.jpg)
+![Djangomanage](https://github.com/zdyCompass/Django_Learning/blob/master/re/Djangomanage.jpg)
 
 但这个登录界面需要进行如下设置才能进入：
 
@@ -139,6 +139,6 @@ virtualenv --no-site-packages -p D:\Program Files\anaconda\python.exe [环境名
 
    根据提示设置登录名和密码。做完以后就可以在数据库中看到如下表了：
 
-   ![dj6_table](E:\千锋上课\python课堂代码\第四阶段\day41\dj6_table.jpg)
+   ![dj6_table](https://github.com/zdyCompass/Django_Learning/blob/master/re/dj6_table.jpg)
 
 完成上述操作之后就可以用设置好的密码和用户名进入Django管理后台了。
