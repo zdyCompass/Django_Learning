@@ -45,7 +45,7 @@
 
 1. 在项目下创建一个templates目录，并创建一个HTML文件(stus.html)：
 
-   ![templates](E:\千锋上课\python课堂代码\第四阶段\day43\templates.jpg)
+   ![templates](https://github.com/zdyCompass/Django_Learning/blob/master/re/templates.jpg)
 
 2. 在settings.py文件中，修改templates路径：
 
