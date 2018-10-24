@@ -13,7 +13,7 @@ MVC 是一种使用 MVC（Model View Controller 模型-视图-控制器）设计
 #### 2. Django中的MVT模式
 
 + Model：负责业务与数据库(ORM)的对象。
-+ View：负责业务逻辑并适当调用Mode和Template。
++ View：负责业务逻辑并适当调用Model和Template。
 + Template：负责把页面渲染展示给用户。
 
 
