@@ -36,43 +36,41 @@
 2. 然后在app/views.py中导入HttpResponse模块，并写出对应的hello函数：
 
    ~~~python
-   from django.http import HttpResponse
-
-
-   def hello(request):
-          return HttpResponse('你好，百度')
+   from django.http import HttpResponse 
+   	def hello(request):
+   	return HttpResponse('你好，百度')
    ~~~
 
-3. 在Terminal中输入命令`python manage.py runserver` ，或运行已创建好的脚本打开服务。在浏览器中输入 `http://127.0.0.1:8080/hello/`可以看到网页返回的‘你好，百度’语句。
+   3. 在Terminal中输入命令`python manage.py runserver` ，或运行已创建好的脚本打开服务。在浏览器中输入 `http://127.0.0.1:8080/hello/`可以看到网页返回的‘你好，百度’语句。
 
 
-#### 3. 创建模型
+   #### 3. 创建模型
 
-##### 3.1 模型类到数据库的实现
+   ##### 3.1 模型类到数据库的实现
 
-1. 在创建好的app目录下打开models.py，定义一个Student类：
+1.    在创建好的app目录下打开models.py，定义一个Student类：
 
-   ~~~python
-   from django.db import models
+      ~~~python
+      from django.db import models
+      ~~~
 
 
-      class Student(models.Model):
-      # 定义s_name字段，varchar类型，最长不超过6字符，唯一
-      s_name = models.CharField(max_length=6, unique=True)
-      # 定义s_age字段，ini类型
-      s_age = models.IntegerField(default=18)
-      # 定义s_gender字段，int类型
-      s_gender = models.BooleanField(default=1)
-      # 定义create_time字段，创建时间
-      create_time = models.DateTimeField(auto_now_add=True, null=True)
-      # 定义operate_time字段，修改时间
-      operate_time = models.DateTimeField(auto_now=True, null=True)
-
-      class Meta:
-          # 定义模型迁移到数据库中的表名
-          db_table = 'student'
-   ~~~
-
+            class Student(models.Model):
+            # 定义s_name字段，varchar类型，最长不超过6字符，唯一
+            s_name = models.CharField(max_length=6, unique=True)
+            # 定义s_age字段，ini类型
+            s_age = models.IntegerField(default=18)
+            # 定义s_gender字段，int类型
+            s_gender = models.BooleanField(default=1)
+            # 定义create_time字段，创建时间
+            create_time = models.DateTimeField(auto_now_add=True, null=True)
+            # 定义operate_time字段，修改时间
+            operate_time = models.DateTimeField(auto_now=True, null=True)
+    
+            class Meta:
+                # 定义模型迁移到数据库中的表名
+                db_table = 'student'
+      ~~~
 
 
 2. 在settings.py中的应用列表中，加入刚刚创建好的app
@@ -90,7 +88,13 @@
        'app',
    ]
    ~~~
-
+   > 注1：DateTimeField：获取当前时间年/月/日/时/分/秒
+   >
+   >    	  DateField：获取当前时间年/月/日
+   >
+   > 注2：auto_now_add：为第一次添加时间，不会改变
+   >
+   > ​	  auto_now：修改时间，修改数据后会变
 
 
 3. 在Terminal中输入命令`python manage.py makemigrations`,该命令会在app/migrations/目录下生成一个迁移文件。然后输入`python manage.py migrate`命令，将模型映射到数据库dj6中，这样就可以在数据库dj6中看到多了一张名字为student的表。
@@ -215,6 +219,18 @@ def create_stu(request):
      >
      > 或    stu_count = **len**(stus)
 
-     ​
+   + Q()，可以通过alt+enter快速导入。作用：对对象进行复杂查询，并支持&（and）,|（or），~（not）操作符。
+
+     > stus = Student.objects.filter(Q(s_age=18) | Q(s_gender=1))
+     >
+     > stus = Student.objects.filter(Q(s_age=18) & Q(s_gender=1))
+     >
+     > stus = Student.objects.filter(~Q(s_age=18))
+
+   + F()。操作数据表中的某列值，F()允许Django在未实际链接数据的情况下具有对数据库字段的值的引用，不用获取对象放在内存中再对字段进行操作，直接执行原生产sql语句操作。
+
+     > stus = Student.objects.filter(chinese__gt=F('math')+10)
+
+     该语句作用是查询数据库学生表中语文成绩比数学成绩大过10分的对象。
 
    ​
