@@ -265,7 +265,7 @@ class TempleB:
 ~~~python
 class TempleA:
     id = xxxx
-    b = OneToOneField(TempleB)
+    b = ForeignKey(TempleB, null=True)
     
 
 class TempleB:
