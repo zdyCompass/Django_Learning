@@ -59,7 +59,7 @@
 
    注意：模型迁移后会在数据库的auth_permission表中，会新增权限，包括自带的对Users管理的权限，和自定义的四个权限。如下所示：
 
-   ![permissions](E:\千锋上课\python课堂代码\第四阶段\day48\permissions.png)
+   ![permissions](https://github.com/zdyCompass/Django_Learning/blob/master/re/permissions.png)
 
 2. 创建用户并给定权限
 
