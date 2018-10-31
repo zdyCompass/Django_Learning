@@ -138,7 +138,7 @@
 注意：中间件是帮助我们在视图函数执行之前和执行之后都可以做一些额外的操作，它本质上就是一个自定义类，类中定义了几个方法，Django框架会在请求的特定的时间去执行这些方法。
 
 ##### 2.2 中间件图解
-![中间件](imahttps://github.com/zdyCompass/Django_Learning/blob/master/re/middleware.jpg)
+![中间件](https://github.com/zdyCompass/Django_Learning/blob/master/re/middleware.jpg)
 ##### 2.3 中间件的定义
 
 1. 在项目下新建utils路径，创建\_\_init__.py文件和存放中间件的middleware.py文件；
